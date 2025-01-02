@@ -29,7 +29,7 @@ Devise.setup do |config|
 
   config.navigational_formats = []
 
-
+  config.password_hash_algorithm = :bcrypt
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
