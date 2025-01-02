@@ -17,6 +17,7 @@ module Server
       domain: '.test-client-react.vercel.app',
       secure: Rails.env.production?,
       same_site: :none,
+      expire_after: 30.minutes,
       tld_length: 2
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
