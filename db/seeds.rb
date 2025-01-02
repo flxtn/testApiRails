@@ -1,4 +1,4 @@
-User.delete_all
+User.destroy_all
 User.create!(
   email: 'user13211223@example.com',
   password: 'password123',
