@@ -1,10 +1,10 @@
 User.create!(
-  email: 'admin@example.com',
-  password: '123456',
+  email: "admin@example.com",
+  password: "123456",
   password_confirmation: "123456",
   first_name: "Ilya",
   last_name: "Bog",
-  role: 'admin'
+  role: "admin"
 )
 
 Item.create!(
