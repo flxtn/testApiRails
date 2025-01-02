@@ -14,13 +14,13 @@ module Server
 
     Rails.application.config.session_store :cookie_store, 
       key: '_interslice_session',
-      domain: '.test-client-react.vercel.app',
+      domain: :all,
       secure: Rails.env.production?,
-      same_site: :none,
       expire_after: 30.minutes,
-      tld_length: 2
+      tld_length: 3
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
+    config.action_dispatch.cookies_same_site_protection = :none
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
