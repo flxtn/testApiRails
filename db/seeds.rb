@@ -1,10 +1,11 @@
 User.destroy_all
 User.create!(
-  email: 'user13211223@example.com',
+  email: 'admin@example.com',
   password: 'password123',
   password_confirmation: 'password123',
   first_name: 'Ilya',
-  last_name: 'Bogomolov'
+  last_name: 'Bogomolov',
+  role: "admin"
 )
 Item.create!(
   [
