@@ -12,7 +12,7 @@ module Server
     config.load_defaults 7.2
     config.api_only = true
 
-    config.session_store :cookie_store, key: '_interslice_session'
+    config.session_store :cookie_store, key: '_interslice_session', secure: Rails.env.production?, same_site: :lax, tld_length: 2
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
 
