@@ -1,3 +1,4 @@
+User.delete_all
 User.create!(
   email: 'user@example.com',
   password: 'password123',
